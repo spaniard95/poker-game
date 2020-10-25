@@ -9,10 +9,12 @@ import './index.css';
      const suits = {spades: "2660", hearts: "2665", clubs: "2663", diamonds: "2666"}
      const uni = String.fromCharCode("0x" + suits[suit]);
      return ( 
+       <li>
          <a className = {className}>
               <span className = "rank">{rank2}</span>
               <span className = "suit">{uni}</span>
          </a>
+        </li>
       );
    }  
  
@@ -33,8 +35,9 @@ import './index.css';
      return (
       <div className = "playingCards">
        <ul className = "hand">
-         { <Card rank={hand[0].rank} suit={hand[0].suit} />}
-         {<Card rank={hand[1].rank} suit={hand[1].suit} />}
+         {hand.map(({rank, suit}) => 
+          <Card rank={rank} suit={suit} />
+         )}
          
       </ul>
    </div>
