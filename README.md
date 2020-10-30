@@ -1,1 +1,1 @@
-This project is poker game developed in React.
+This project is a poker game developed in React.
