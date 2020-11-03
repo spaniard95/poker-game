@@ -14,7 +14,7 @@ function Card({rank, suit}) {
              <span className = "rank">{rank2}</span>
              <span className = "suit">{uni}</span>
         </a>
-      </li>
+     </li>
     );
   }  
   
