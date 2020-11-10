@@ -1,9 +1,16 @@
 import React from 'react';
-
 import Player from 'components/player';
 import './game.css';
+import Opponent from 'components/opponent';
+import {buildDeck,dealCards} from 'lib';
 
 class Game extends React.Component {
+   constructor(props){
+    super(props);
+    this.state = {
+      deck: buildDeck()
+    };
+  }
     render() {
       const hand = [
         { rank: 7, suit: "hearts"},
@@ -14,7 +21,8 @@ class Game extends React.Component {
       ];
       return ( 
         <div className = "table">
-            <Player hand={hand} />
+            <Player hand={dealCards(this.state.deck, 5).cards} />
+            <Opponent hand={hand}/>
         </div>
       );
     }

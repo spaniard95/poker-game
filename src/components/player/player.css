@@ -1,9 +1,7 @@
 .player{
-    
-    height: 100px;
     margin: 0 auto;
     position:absolute;
-    top: 95%;
-    left: 40%;
+    top: 100%;
+    left: 45%;
     transform: translate(-50%, -50%);
 }
