@@ -1,3 +1,7 @@
 import Hand from './Hand';
+import HiddenHand from './HiddenHand';
 
-export default Hand;
+export {
+    Hand,
+    HiddenHand
+};

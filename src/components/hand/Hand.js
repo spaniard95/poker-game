@@ -6,7 +6,7 @@ function Hand({hand}) {
     return (
         <div className = "playingCards">
              <ul className = "hand"> 
-              {hand.map(({rank, suit}) => 
+              {hand.map(({rank, suit, weight}) => 
                <Card rank={rank} suit={suit} /> 
               )}   
              </ul>

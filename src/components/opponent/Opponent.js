@@ -1,10 +1,10 @@
 import React from 'react';
-import  Hand from 'components/hand';
+import  {Hand, HiddenHand} from 'components/hand';
 import './opponent.css';
 
-const Opponent = ({ hand }) => (
+const Opponent = ({ hand, show}) => (
     <div className = "opponent">
-      <Hand hand={hand} />
+      {show ? <Hand hand={hand} /> : <HiddenHand />} 
    </div>
 );
 

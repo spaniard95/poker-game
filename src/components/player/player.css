@@ -1,7 +1,13 @@
 .player{
-    margin: 0 auto;
-    position:absolute;
-    top: 100%;
+    position:relative;
+    top: 90%;
     left: 45%;
-    transform: translate(-50%, -50%);
 }
+#ui{
+    position: absolute;
+    width:100px;
+    height:100px;
+    left: 45%;
+    top: 50%;
+ }
+

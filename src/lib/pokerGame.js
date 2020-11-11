@@ -1,5 +1,5 @@
-const Ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
-const Suits = ['heart', 'club', 'spade', 'diamond'];
+const Ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'j', 'q', 'k', 'a'];
+const Suits = ['hearts', 'clubs', 'spades', 'diamonds'];
 
 function buildDeck(){
      let deck = [];
@@ -17,10 +17,13 @@ function buildDeck(){
 }
 
 function dealCards(deck, numCards){
-
-     return {
-         cards: deck.slice(0,numCards) , 
-         deck: deck
+    
+    return {
+         cards: deck.slice(0, numCards)
+            .sort((a, b) =>
+                a.weight - b.weight
+            ) , 
+         deck: deck.slice(5),
      }
 }
 
