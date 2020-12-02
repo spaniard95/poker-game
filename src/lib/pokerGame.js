@@ -10,6 +10,7 @@ function buildDeck(){
                 rank, 
                 suit,
                 weight,
+                selected: false,
             })
         )
     );
@@ -23,15 +24,19 @@ function dealCards(deck, numCards){
             .sort((a, b) =>
                 a.weight - b.weight
             ) , 
-         deck: deck.slice(5),
+         deck: deck.slice(numCards),
      }
 }
 
-function changeCards(hand, cards, newCards){
-    
+function changeCards(hand, newCards){
+    return ([...hand, ...newCards].sort((a, b) =>
+            a.weight - b.weight
+        ) 
+    );
 }
 
 export { 
     buildDeck,
     dealCards,
+    changeCards,
 };

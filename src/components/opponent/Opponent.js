@@ -1,5 +1,5 @@
 import React from 'react';
-import  {Hand, HiddenHand} from 'components/hand';
+import  { Hand, HiddenHand } from 'components/hand';
 import './opponent.css';
 
 const Opponent = ({ hand, show}) => (

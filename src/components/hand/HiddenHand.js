@@ -12,7 +12,16 @@ function hiddenHand() {
               </li>  
               <li>
                   <div class="card back">*</div>
+              </li>
+              <li>
+                  <div class="card back">*</div>
               </li>  
+              <li>
+                  <div class="card back">*</div>
+              </li>  
+              <li>
+                  <div class="card back">*</div>
+              </li>    
              </ul>
         </div>
     );    

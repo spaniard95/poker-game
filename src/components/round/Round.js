@@ -1,33 +1,38 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Player from 'components/player';
 import Opponent from 'components/opponent';
 import { buildDeck, dealCards } from 'lib';
 
-const roundState = [
-    {}
-]
+const Round = props => {
+  const [stage, setStage] = useState({turn: 0, playersAlive: props.players.length});
+ 
+  const deck = useRef(buildDeck());
 
+  const giveCards = num => {
+     const cards = dealCards(deck.current, num).cards;
+     deck.current = deck.current.slice(num);
+     return cards;
+  } 
 
-
-const Round = () => {
-    const startRound = {
-        deck: buildDeck(),
-        hand1: {},
-        hand2: {},
-        roundWinner: false,
-    };
-    let step = dealCards(startRound.deck, 5);
-    startRound.hand1 = step.cards;
-    startRound.deck = step.deck;
-    step = dealCards(startRound.deck, 5);
-    startRound.hand2 = step.cards;
+  // const playerAnswered = id => {
+  //   setStage(prevStage => )
+  // }
   
-  return(
-      <a>
-        <Player hand={startRound.hand1} />
-        <Opponent hand={startRound.hand2} show={true}/>
-     </a>
+  const handleCardClick = () => {alert()}
+  
+  return (
+    <a>
+      <Player 
+        id={0}
+        initHand={giveCards(5)} 
+        giveCards = {giveCards}
+      />
+      <Opponent
+        id={1} 
+        hand={giveCards(5)} 
+        show={false}/>
+    </a>
   );
-};
+}
 
 export default Round;

@@ -1,6 +1,7 @@
-import {buildDeck, dealCards} from './pokerGame';
+import {buildDeck, dealCards, changeCards} from './pokerGame';
 
 export {
     buildDeck,
     dealCards,
+    changeCards
 };
